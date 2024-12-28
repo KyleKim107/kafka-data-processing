@@ -1,40 +1,11 @@
 # kafka-data-processing
 
-2. **Connect to EC2**
+ **Create EC2** 
+![](images/ec2-console.png)
+ **Connect to EC2**
    ```bash
-   $ ssh -i "njkwon-fc-seoul.pem" ec2-user@<your-ec2-public-ip>.ap-northeast-1.compute.amazonaws.com
+   $ ssh -i "dataEng-seoul.pem" ec2-user@<your-ec2-public-ip>.ap-northeast-1.compute.amazonaws.com
    ```
-
----
-
-## Description: Running a Web Service on EC2
-
-1. **Start Web Service**
-   ```bash
-   sudo yum update -y
-   sudo yum install httpd -y
-   sudo service httpd start
-   sudo su -
-   echo "<html><h1><center>7 Projects Perfectly Completing the AWS Data Pipeline Architecture</center></h1></html>" > /var/www/html/index.html
-   ```
-
-2. **Automated Web Service Setup (Script)**
-   - Use the following script when creating an EC2 instance:
-     ```bash
-     #!/bin/bash
-     yum update -y
-     yum install httpd -y
-     sudo service httpd start
-     echo "<html><h1><center>7 Projects Perfectly Completing the AWS Data Pipeline Architecture</center></h1></html>" > /var/www/html/index.html
-     ```
-
-3. **Install Java**
-   ```bash
-   $ sudo yum install -y java-11-amazon-corretto
-   $ java –version
-   ```
-
----
 
 ## Kafka Setup on EC2
 
