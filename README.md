@@ -119,16 +119,16 @@ Producer --> Kafka Cluster(Queue) --> Consumer
    ```bash
    $ vi apartinfo.conf
    ```
-
-   Example configuration:
+   Add S3 config info for fetching log data.
+   
    ```plaintext
    input {
       s3 {
         access_key_id => "accesskey"
         secret_access_key => "security_key"
         region => "ap-northeast-2"
-        prefix => "ods/danji_master.json/" #bucket 하위 폴더를 지정해준다. 
-        bucket => "fc-storydata"                         #bucket 명을 지정해준다.
+        prefix => "ods/danji_master.json/" #set bucket directory
+        bucket => "fc-storydata"
         additional_settings => {
           force_path_style => true
           follow_redirects => false
