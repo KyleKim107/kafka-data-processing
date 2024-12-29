@@ -14,6 +14,7 @@ Kafka data flow hands-on with public data. Created three EC2 instances to simula
 3. **Consumers**:
    - Subscribes to topics in the Kafka cluster.
    - Receives and processes data from the cluster.
+   - Runs python script to displays recieved data with polling every second.
 
 ```
 Producer --> Kafka Cluster(Queue) --> Consumer
