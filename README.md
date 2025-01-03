@@ -137,14 +137,14 @@ Producer --> Kafka Cluster(Queue) --> Consumer
       }
     }
 
-output {
-  stdout { }
-    kafka {
-        codec => json
-        topic_id => "apartinfo"
-        bootstrap_servers =>  ["[172.31.6.238:kafka server ip]:9092"]
-    }  
-}
+   output {
+   stdout { }
+      kafka {
+         codec => json
+         topic_id => "apartinfo"
+         bootstrap_servers =>  ["[172.31.6.238:kafka server ip]:9092"]
+      }  
+   }
    ```
 
 4. **Run Logstash**
